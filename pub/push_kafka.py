@@ -14,7 +14,7 @@ class Push_kafka:
                                       )
 
     def send_by_topic(self,topic,arr):
-        for i in range(1):
+        for i in range(10):
             dic = {}
             dic['data'] = arr.data[i]
             dic['target_name'] = arr.target_names[arr.target[i]]
