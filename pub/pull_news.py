@@ -28,10 +28,12 @@ class News:
 
     def get_news(self):
         try:
+            newsgroups_interesting=["a","b","c"]
+            newsgroups_not_interesting=["a","b","c"]
             newsgroups_interesting=fetch_20newsgroups(subset='all',categories=self.interesting_cats)
             newsgroups_not_interesting=fetch_20newsgroups(subset='all',categories=self.not_interesting_cats)
         except:
             print("An exception occurred")
-            newsgroups_interesting = ["","",""]
-            newsgroups_not_interesting= ["","",""]
+            newsgroups_interesting = ["a","b","c"]
+            newsgroups_not_interesting= ["a","b","c"]
         return {"newsgroups_interesting":newsgroups_interesting,"newsgroups_not_interesting":newsgroups_not_interesting}

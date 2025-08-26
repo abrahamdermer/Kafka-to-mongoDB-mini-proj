@@ -20,6 +20,4 @@ for message in consumer:
         "message": message.value.decode('utf-8'),
         "time":datetime.datetime.now()
         })
-    
-    
     # print("message:", message.value.decode('utf-8'))
